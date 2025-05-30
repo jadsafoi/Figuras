@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Figuras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+    .figura { border: 1px solid #ccc; border-radius: 10px; padding: 20px; margin-bottom: 20px; width: 70%; background-color: rgba(0, 0, 0, 0.5); }
+    img { max-width: 200px; height: auto; filter: blur(5px); transition: 1.5s; }
+    img:hover { transition: 1.5s; filter: none; }
+    h2 { color: #2c3e50; }
+  </style>
+  <center>
+  <h1>Resumen de Figuras Geométricas</h1>
+
+  <div class="figura">
+    <h2>Cuadrado</h2>
+    <p><strong>Resumen:</strong> Figura con cuatro lados iguales y ángulos rectos.</p>
+    <p><strong>Área:</strong> A = lado × lado</p>
+    <p><strong>Perímetro:</strong> P = 4 × lado</p>
+    <img src="https://www.pictoeduca.com/config/timthumb-alt.php?src=https://www.pictoeduca.com/uploads/2020/05/619d3d25e9851_unidades.png&w=847" alt="Cuadrado">
+  </div>
+
+  <div class="figura">
+    <h2>Rectángulo</h2>
+    <p><strong>Resumen:</strong> Figura con lados opuestos iguales y cuatro ángulos rectos.</p>
+    <p><strong>Área:</strong> A = base × altura</p>
+    <p><strong>Perímetro:</strong> P = 2 × (base + altura)</p>
+    <img src="https://timvandevall.com/wp-content/uploads/jeopardy-game-question-template.png" alt="Rectángulo">
+  </div>
+
+  <div class="figura">
+    <h2>Círculo</h2>
+    <p><strong>Resumen:</strong> Figura redonda con todos sus puntos equidistantes del centro.</p>
+    <p><strong>Área:</strong> A = π × radio²</p>
+    <p><strong>Perímetro (circunferencia):</strong> P = 2 × π × radio</p>
+    <img src="https://cloud.educaplay.com/recursos/448/14343819/image6417286e99aa5.png" alt="Círculo">
+  </div>
+
+  <div class="figura">
+    <h2>Triángulo Equilátero</h2>
+    <p><strong>Resumen:</strong> Triángulo con tres lados y tres ángulos iguales.</p>
+    <p><strong>Área:</strong> A = (√3 / 4) × lado²</p>
+    <p><strong>Perímetro:</strong> P = 3 × lado</p>
+    <img src="https://th.bing.com/th/id/OIP.jC1Erv8t_4ivGKCcl5vQCAHaGr?rs=1&pid=ImgDetMain" alt="Triángulo Equilátero">
+  </div>
+
+  <div class="figura">
+    <h2>Pentágono</h2>
+    <p><strong>Resumen:</strong> Polígono de cinco lados iguales.</p>
+    <p><strong>Área:</strong> A = (5 × lado²) / (4 × tan(π / 5))</p>
+    <p><strong>Perímetro:</strong> P = 5 × lado</p>
+    <img src="https://i.pinimg.com/originals/78/62/c7/7862c79f9e3e9ea8697ad2dc59f2e81d.png" alt="Pentágono">
+  </div>
+
+  <div class="figura">
+    <h2>Hexágono</h2>
+    <p><strong>Resumen:</strong> Polígono de seis lados iguales.</p>
+    <p><strong>Área:</strong> A = ((3 × √3) / 2) × lado²</p>
+    <p><strong>Perímetro:</strong> P = 6 × lado</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/217/217236.png" alt="Hexágono">
+  </div>
+
+  <div class="figura">
+    <h2>Rombo</h2>
+    <p><strong>Resumen:</strong> Cuadrilátero con lados iguales y ángulos opuestos iguales.</p>
+    <p><strong>Área:</strong> A = (diagonal mayor × diagonal menor) / 2</p>
+    <p><strong>Perímetro:</strong> P = 4 × √((Dma/2)² + (Dme/2)²)</p>
+    <img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/49285/small-blue-diamond-emoji-clipart-md.png" alt="Rombo">
+  </div>
+
+  <div class="figura">
+    <h2>Trapecio</h2>
+    <p><strong>Resumen:</strong> Cuadrilátero con dos lados opuestos paralelos (bases).</p>
+    <p><strong>Área:</strong> A = ((base mayor + base menor) × altura) / 2</p>
+    <p><strong>Perímetro:</strong> P = base mayor + base menor + 2 × lado inclinado (calculado con Pitágoras)</p>
+    <img src="https://conceptoabc.com/wp-content/uploads/2022/05/Trapecio.jpg" alt="Trapecio">
+  </div>
+
+  <h2>Calcula el área y perímetro</h2>
+
+  <form id="formulario">
+      <h1>Figuras Geométricas</h1>
+
+      <label>Selecciona una figura:</label>
+      <select name="figura" id="figura" onchange="cambiar()">
+          <option value="cuadrado">Cuadrado</option>
+          <option value="rectangulo">Rectángulo</option>
+          <option value="circulo">Círculo</option>
+          <option value="triangulo">Triángulo Equilátero</option>
+          <option value="pentagono">Pentágono</option>
+          <option value="hexagono">Hexágono</option>
+          <option value="rombo">Rombo</option>
+          <option value="trapecio">Trapecio</option>
+      </select>
+
+      <div id="lado"><label>Lado: <input type="number" name="lado" step="any" id="lado"></label></div>
+      <div id="base"><label>Base: <input type="number" name="base" step="any" id="base"></label></div>
+      <div id="altura"><label>Altura: <input type="number" name="altura" step="any" id="altura"></label></div>
+      <div id="radio"><label>Radio: <input type="number" name="radio" step="any" id="radio"></label></div>
+      <div id="dM"><label>Diagonal Mayor: <input type="number" name="dM" step="any" id="dM"></label></div>
+      <div id="dm"><label>Diagonal Menor: <input type="number" name="dm" step="any" id="dm"></label></div>
+      <div id="BM"><label>Base Mayor: <input type="number" name="BM" step="any" id="BM"></label></div>
+      <div id="bm"><label>Base Menor: <input type="number" name="bm" step="any" id="bm"></label></div>
+      <div id="htrapecio"><label>Altura: <input type="number" name="htrapecio" step="any" id="htrapecio"></label></div>
+
+      <button type="submit">Calcular</button>
+  </form>
+  <div class="res"></div>
+
+  <script src="Uno.js"></script>
+  <script src="dos.js"></script>
+  <script>
+    window.onload = cambiar;
+  </script>
+  </center>
+</body>
+</html>
