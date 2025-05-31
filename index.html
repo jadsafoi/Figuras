@@ -13,72 +13,146 @@
     img { max-width: 200px; height: auto; filter: blur(5px); transition: 1.5s; }
     img:hover { transition: 1.5s; filter: none; }
     h2 { color: #2c3e50; }
+
+    nav {
+    background-color: #2421e2;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    position: relative;
+    margin: 0 15px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+li a:hover {
+    border: 2px;
+    background-color: #192198;
+    box-shadow: 0px 0px 15px rgba(47, 13, 169, 0.9);
+    border-radius: 15px;
+}
+
+li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    background-color: #334acd;
+    padding: 0;
+}
+
+li:hover ul {
+    display: block;
+}
+
+li ul li {
+    margin: 0;
+}
+
   </style>
   <center>
-  <h1>Resumen de Figuras Geométricas</h1>
+    
 
-  <div class="figura">
+   <nav>
+    <ul>
+        <li><a href="#Cuadrado" >Cuadrado</a></li>
+        <li><a href="#Rectángulo" >Rectángulo</a></li>
+        <li><a href="#Círculo" >Círculo</a></li>
+        <li><a href="#Triangulo" >Triángulo</a></li>
+        <li><a href="#Pentágono" >Pentágono</a></li>
+        <li><a href="#Hexágono" >Hexágono</a></li>
+        <li><a href="#Rombo" >Rombo</a></li>
+        <li><a href="#Trapecio" >Trapecio</a></li>
+        <li><a href="#área" >Área</a></li>
+    </ul>
+</nav>
+
+
+  <h1>Figuras Geométricas</h1>
+
+  <div class="figura" id="Cuadrado">
     <h2>Cuadrado</h2>
-    <p><strong>Resumen:</strong> Figura con cuatro lados iguales y ángulos rectos.</p>
+    <p> Figura con cuatro lados iguales y ángulos rectos.</p>
     <p><strong>Área:</strong> A = lado × lado</p>
     <p><strong>Perímetro:</strong> P = 4 × lado</p>
-    <img src="https://www.pictoeduca.com/config/timthumb-alt.php?src=https://www.pictoeduca.com/uploads/2020/05/619d3d25e9851_unidades.png&w=847" alt="Cuadrado">
+    <img src="https://www.pictoeduca.com/config/timthumb-alt.php?src=https://www.pictoeduca.com/uploads/2020/05/619d3d25e9851_unidades.png&w=847" alt="Cuadrado" id="Rectángulo">
   </div>
 
   <div class="figura">
     <h2>Rectángulo</h2>
-    <p><strong>Resumen:</strong> Figura con lados opuestos iguales y cuatro ángulos rectos.</p>
+    <p> Figura con lados opuestos iguales y cuatro ángulos rectos.</p>
     <p><strong>Área:</strong> A = base × altura</p>
     <p><strong>Perímetro:</strong> P = 2 × (base + altura)</p>
-    <img src="https://timvandevall.com/wp-content/uploads/jeopardy-game-question-template.png" alt="Rectángulo">
+    <img src="https://timvandevall.com/wp-content/uploads/jeopardy-game-question-template.png" alt="Rectángulo" id="Círculo">
   </div>
 
   <div class="figura">
     <h2>Círculo</h2>
-    <p><strong>Resumen:</strong> Figura redonda con todos sus puntos equidistantes del centro.</p>
+    <p> Figura redonda con todos sus puntos equidistantes del centro.</p>
     <p><strong>Área:</strong> A = π × radio²</p>
     <p><strong>Perímetro (circunferencia):</strong> P = 2 × π × radio</p>
-    <img src="https://cloud.educaplay.com/recursos/448/14343819/image6417286e99aa5.png" alt="Círculo">
+    <img src="https://cloud.educaplay.com/recursos/448/14343819/image6417286e99aa5.png" alt="Círculo" >
   </div>
 
   <div class="figura">
-    <h2>Triángulo Equilátero</h2>
-    <p><strong>Resumen:</strong> Triángulo con tres lados y tres ángulos iguales.</p>
+    <h2 id="Triangulo">Triángulo Equilátero</h2>
+    <p> Triángulo con tres lados y tres ángulos iguales.</p>
     <p><strong>Área:</strong> A = (√3 / 4) × lado²</p>
     <p><strong>Perímetro:</strong> P = 3 × lado</p>
-    <img src="https://th.bing.com/th/id/OIP.jC1Erv8t_4ivGKCcl5vQCAHaGr?rs=1&pid=ImgDetMain" alt="Triángulo Equilátero">
+    <img src="https://th.bing.com/th/id/OIP.jC1Erv8t_4ivGKCcl5vQCAHaGr?rs=1&pid=ImgDetMain" alt="Triángulo Equilátero" id="Pentágono">
   </div>
 
   <div class="figura">
     <h2>Pentágono</h2>
-    <p><strong>Resumen:</strong> Polígono de cinco lados iguales.</p>
+    <p> Polígono de cinco lados iguales.</p>
     <p><strong>Área:</strong> A = (5 × lado²) / (4 × tan(π / 5))</p>
     <p><strong>Perímetro:</strong> P = 5 × lado</p>
-    <img src="https://i.pinimg.com/originals/78/62/c7/7862c79f9e3e9ea8697ad2dc59f2e81d.png" alt="Pentágono">
+    <img src="https://i.pinimg.com/originals/78/62/c7/7862c79f9e3e9ea8697ad2dc59f2e81d.png" alt="Pentágono" id="Hexágono">
   </div>
 
   <div class="figura">
     <h2>Hexágono</h2>
-    <p><strong>Resumen:</strong> Polígono de seis lados iguales.</p>
+    <p> Polígono de seis lados iguales.</p>
     <p><strong>Área:</strong> A = ((3 × √3) / 2) × lado²</p>
     <p><strong>Perímetro:</strong> P = 6 × lado</p>
-    <img src="https://cdn-icons-png.flaticon.com/512/217/217236.png" alt="Hexágono">
+    <img src="https://cdn-icons-png.flaticon.com/512/217/217236.png" alt="Hexágono" id="Rombo">
   </div>
 
   <div class="figura">
     <h2>Rombo</h2>
-    <p><strong>Resumen:</strong> Cuadrilátero con lados iguales y ángulos opuestos iguales.</p>
+    <p> Cuadrilátero con lados iguales y ángulos opuestos iguales.</p>
     <p><strong>Área:</strong> A = (diagonal mayor × diagonal menor) / 2</p>
     <p><strong>Perímetro:</strong> P = 4 × √((Dma/2)² + (Dme/2)²)</p>
-    <img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/49285/small-blue-diamond-emoji-clipart-md.png" alt="Rombo">
+    <img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/49285/small-blue-diamond-emoji-clipart-md.png" alt="Rombo" id="Trapecio">
   </div>
 
   <div class="figura">
     <h2>Trapecio</h2>
-    <p><strong>Resumen:</strong> Cuadrilátero con dos lados opuestos paralelos (bases).</p>
+    <p> Cuadrilátero con dos lados opuestos paralelos (bases).</p>
     <p><strong>Área:</strong> A = ((base mayor + base menor) × altura) / 2</p>
     <p><strong>Perímetro:</strong> P = base mayor + base menor + 2 × lado inclinado (calculado con Pitágoras)</p>
-    <img src="https://conceptoabc.com/wp-content/uploads/2022/05/Trapecio.jpg" alt="Trapecio">
+    <img src="https://conceptoabc.com/wp-content/uploads/2022/05/Trapecio.jpg" alt="Trapecio" id="área">
   </div>
 
   <h2>Calcula el área y perímetro</h2>
@@ -120,3 +194,4 @@
   </center>
 </body>
 </html>
+
